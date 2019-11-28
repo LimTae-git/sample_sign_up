@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Document</title>
-  </head>
-  <body>
-    <h3>로그인</h3>
+<head>
+  <meta charset="utf-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="CSS/login.css">
+</head>
+<body>
+  <div class="login_form">
+    <div class = "loginer">
+    <h1>로그인</h1>
     <form action="/users/login" method="post">
-      <table>
-      <tr>
-        <td>아이디: </td>
-        <td><input type="text" name="userID"></td>
-      </tr>
-      <tr>
-        <td>비밀번호: </td>
-        <td><input type="password" name="password"></td>
-      </tr>
-      <tr>
-        <td><input type="submit" value="로그인"></td>
-      </tr>
-      </table>
+
+        <tr>
+          <td>아이디: </td>
+          <td><input type="text" name="userID" placeholder="Username"></td>
+        </tr>
+        <tr>
+          <td>비밀번호: </td>
+          <td><input type="password" name="password" placeholder="Password"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="로그인"></td>
+        </tr>
+
     </form>
-  </body>
+    </div>
+  </div>
+</body>
 </html>
