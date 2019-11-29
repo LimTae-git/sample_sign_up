@@ -24,12 +24,13 @@ router.post("/sign_up", async function(req, res, next){
     phone: body.userPhone,
     salt: salt
   })
-  res.redirect("/users/sign_up");
+  res.send('회원가입이 완료되었습니다.')
+  res.redirect("/users/login");
 })
 
 // 메인 페이지
 router.get('/', function(req, res, next){
-  res.send('님 환영합니다');
+  res.send('환영합니다.');
 });
 
 // 로그인 GET

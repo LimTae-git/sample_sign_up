@@ -1,0 +1,10 @@
+.signer {
+  position: absolute;
+  padding: 20px;
+  width: 300px;
+  background-color: #EEEFF1;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
