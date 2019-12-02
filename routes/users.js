@@ -24,13 +24,14 @@ router.post("/sign_up", async function(req, res, next){
     phone: body.userPhone,
     salt: salt
   })
-  res.send('회원가입이 완료되었습니다.')
-  res.redirect("/users/login");
+  res.redirect("/users/login")
+  alert('회원가입이 완료되었습니다.');
+  ;
 })
 
 // 메인 페이지
-router.get('/', function(req, res, next){
-  res.send('환영합니다.');
+router.get('/home', function(req, res, next){
+  res.render('user/home');
 });
 
 // 로그인 GET
@@ -55,7 +56,7 @@ router.post("/login", async function(req, res, next){
 
   if(dbPassword = hashPassword){
     console.log("비밀번호가 일치합니다");
-    res.redirect("/users");
+    res.redirect("/users/home");
   }
   else{
     console.log("비밀번호가 틀렸습니다.");

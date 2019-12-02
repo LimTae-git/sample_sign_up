@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/public/home.css">
+  </head>
+  <body>
+    <div class="homes">
+    <h1>홈 화면 입니다.</h1>
+    <form action="/users/home" method="post">
+<table>
+  <tr>
+    <td><input type="button" value="로그인" onclick="location.href = 'http://localhost:3000/users/login'"></td>
+    <td><input type="button" value="회원가입" onclick="location.href = 'http://localhost:3000/users/sign_up'"></td>
+  </tr>
+</table>
+    </form>
+    </div>
+  </body>
+</html>
