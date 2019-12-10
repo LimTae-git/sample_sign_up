@@ -24,9 +24,7 @@ router.post("/sign_up", async function(req, res, next){
     phone: body.userPhone,
     salt: salt
   })
-  res.redirect("/users/login")
-  alert('회원가입이 완료되었습니다.');
-  ;
+  res.redirect("/users/login");
 })
 
 // 메인 페이지
@@ -49,12 +47,12 @@ router.post("/login", async function(req, res, next){
     }
   });
 
-  let dbPassword = result.dataValues.password;
-  let inputPassword = body.password;
-  let salt = result.dataValues.salt;
+  let dbPassword = result.dataValues.password;    // db에 저장되어있는 비밀번호
+  let inputPassword = body.password;    // 입력받는 비밀번호
+  let salt = result.dataValues.salt;    // 암호화 할 때 쓴 salt값
   let hashPassword = crypto.createHash("sha512").update(inputPassword + salt).digest("hex");
 
-  if(dbPassword = hashPassword){
+  if(dbPassword === hashPassword){
     console.log("비밀번호가 일치합니다");
     res.redirect("/users/home");
   }

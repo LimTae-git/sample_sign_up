@@ -1,10 +1,147 @@
-.signer {
+body, div, fieldset, legend, input {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: "굴림", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  text-indent:-9999px;
+  display: none;
+}
+
+/* header css */
+#main_header > h1.h_logo {
   position: absolute;
-  padding: 20px;
-  width: 300px;
-  background-color: #EEEFF1;
-  border-radius: 5px;
-  top: 50%;
+  margin: 0 auto;
+  top: 10%;
+  left: 45%;
+}
+
+
+/* loing_form css 가운데 배치 */
+#container {
+  width: 504px;
+  height: 450px;
+  border: 1px solid black;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;
+  margin: -140px 0 0 -292px;
+  padding: 22px 40px 8px;
+}
+
+#container h2{
+  width: 430px;
+  height: 18px;
+  text-indent: 70px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.content {
+  width: 504px;
+  height: 370px;
+  border-top: 1px dotted #888;
+  border-bottom: 1px dotted #888;
+  position: relative;
+}
+
+
+.content .id_area {
+  width: 270px;
+  height: 22px;
+  position: absolute;
+  top: 20px;
+  left: 85px;
+}
+
+.content .pw_area {
+  width: 270px;
+  height: 22px;
+  position: absolute;
+  top: 70px;
+  left: 85px;
+}
+
+.content .name_area {
+  width: 270px;
+  height: 22px;
+  position: absolute;
+  top: 120px;
+  left: 85px;
+}
+
+.content .birth_area {
+  width: 270px;
+  height: 22px;
+  position: absolute;
+  top: 170px;
+  left: 85px;
+}
+
+.content .phone_area {
+  width: 270px;
+  height: 22px;
+  position: absolute;
+  top: 220px;
+  left: 85px;
+}
+
+.content .id_area label {
+  width: 34px;
+  height: 11px;
+
+}
+
+.content .pw_area label {
+  width: 34px;
+  height: 11px;
+
+}
+
+.content .name_area label {
+  width:  34px;
+  height: 11px;
+}
+
+.content .birth_area label {
+  width: 34px;
+  height: 11px;
+}
+
+.content .phone_area label {
+  width: 34px;
+  height: 11px;
+}
+
+.content .id_area input, .content .pw_area input, .content .name_area input, .content .birth_area input, .content .phone_area input {
+  width: 350px;
+  height: 30px;
+  border: 1px solid #999;
+}
+
+.content .btn_sign {
+  position: absolute;
+  width: 350px;
+  height: 27px;
+  top: 290px;
+  left: 85px;
+}
+
+.content .btn_cancel {
+  position: absolute;
+  width: 350px;
+  height: 27px;
+  top: 325px;
+  left: 85px;
 }

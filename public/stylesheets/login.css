@@ -1,10 +1,114 @@
-.loginer {
+body, div, fieldset, legend, input {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: "굴림", sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+
+fieldset {
+  border: 0;
+}
+
+
+legend {
+  text-indent:-9999px;
+  display: none;
+}
+
+/* header css */
+#main_header > h1.h_logo {
   position: absolute;
-  padding: 20px;
-  width: 300px;
-  background-color: #EEEFF1;
-  border-radius: 5px;
-  top: 50%;
+  margin: 0 auto;
+  top: 10%;
+  left: 45%;
+
+}
+
+/* loing_form css 가운데 배치 */
+#container {
+  width: 504px;
+  height: 250px;
+  border: 1px solid black;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;
+  margin: -140px 0 0 -292px;
+  padding: 22px 40px 8px;
+}
+
+#container h2{
+  width: 430px;
+  height: 18px;
+  text-indent: 70px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.content {
+  width: 504px;
+  height: 150px;
+  border-top: 1px dotted #888;
+  border-bottom: 1px dotted #888;
+  position: relative;
+}
+
+.content .id_area {
+  width: 270px;
+  height: 22px;
+  position: absolute;
+  top: 0px;
+  left: 70px;
+}
+
+.content .pw_area {
+  width: 270px;
+  height: 22px;
+  position: absolute;
+  top: 40px;
+  left: 70px;
+}
+
+.content .id_area label {
+  display: block;
+  float: left;
+  width: 34px;
+  height: 11px;
+  text-indent: -9999px;
+  margin: 7px 27px 0 0;
+}
+
+.content .pw_area label {
+  display: block;
+  float: left;
+  width: 39px;
+  height: 11px;
+  text-indent: -9999px;
+  margin: 7px 22px 0 0;
+}
+
+.content .id_area input, .login_form .pw_area input {
+  width: 370px;
+  height: 27px;
+  border: 1px solid #999;
+}
+
+.content .btn_log {
+  position: absolute;
+  width: 370px;
+  height: 30px;
+  top: 105px;
+  left: 70px;
+
+}
+
+.content .btn_sign {
+  position: absolute;
+  width: 370px;
+  height: 30px;
+  top: 170px;
+  left: 70px;
 }

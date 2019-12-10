@@ -6,16 +6,17 @@
     <link rel="stylesheet" href="/stylesheets/home.css">
   </head>
   <body>
-    <div class="homes">
-    <h1>홈 화면 입니다.</h1>
     <form action="/users/home" method="post">
-<table>
-  <tr>
-    <td><input type="button" value="로그인" onclick="location.href = 'http://localhost:3000/users/login'"></td>
-    <td><input type="button" value="회원가입" onclick="location.href = 'http://localhost:3000/users/sign_up'"></td>
-  </tr>
-</table>
+      <header id="main_header">
+        <h1 class="h_logo">
+          <a href = "http://localhost:3000/users/home"><img src="/images/home.png" width="150" />
+        </h1>
+        <div class="login_menu">
+          <span><a href="http://localhost:3000/users/login">로그인</a></span>
+          <span><a href="http://localhost:3000/users/sign_up">회원가입</a></span>
+        </div>
+      </header>
+
     </form>
-    </div>
   </body>
 </html>

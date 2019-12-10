@@ -1,41 +1,105 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>회원 가입</title>
-    <link rel="stylesheet" href="/stylesheets/signer.css">
-  </head>
-  <body>
-    <div class="signer">
-    <h3>회원 가입</h3>
-    <form action="/users/sign_up" method="post">
-      <table>
-        <tr>
-          <td>아이디: </td>
-          <td><input type="text" name="userID" placeholder="Username"></td>
-        </tr>
-        <tr>
-          <td>비밀번호: </td>
-          <td><input type="password" name="password" placeholder="Password"></td>
-        </tr>
-        <tr>
-          <td>이름: </td>
-          <td><input type="text" name="userName" placeholder="ex) 홍길동"></td>
-        </tr>
-        <tr>
-          <td>생년월일: </td>
-          <td>
-            <input type="text" name="userBirth" placeholder="yymmdd(6자)">
-          </td>
-        </tr>
-        <tr>
-          <td>휴대전화</td>
-          <td><input type="text" name="userPhone" placeholder="01012345678"></td>
-        </tr>
-      </table>
-      <br>
-      <input type="submit" value="가입" />  <input type="button" value="취소" onclick="location.href= 'http://localhost:3000/users/home'">
-    </form>
+<head>
+  <meta charset="utf-8">
+  <title>회원 가입</title>
+  <link rel="stylesheet" href="/stylesheets/signer.css">
+</head>
+<body>
+  <form action="/users/sign_up" method="post">
+    <!-- 상단 로고 -->
+    <header id="main_header">
+      <h1 class="h_logo">
+        <a href = "http://localhost:3000/users/home"><img src="/images/home.png" width="150" /><a>
+        </h1>
+      </header>
+      
+  <div id="container">
+    <h2>회원 가입</h2>
+    <div class="content">
+      <fieldset class="signup_form">
+        <legend>회원 가입</legend>
+
+        <div class="id_area">
+          <span class="input_box">
+            <label for="id" id="label_id_area">아이디 </label>
+            <input type="text" id="id" name="userID" placeholder="  아이디">
+          </span>
+        </div>
+
+        <div class="pw_area">
+          <span class="input_box">
+            <label for="pw" id="label_pw_area">비밀번호 </label>
+            <input type="password" id="password" name="password" placeholder=" 비밀번호">
+          </span>
+        </div>
+
+        <div class="name_area">
+          <span class="input_box">
+            <label for="name" id="label_name_area">이름 </label>
+            <input type="text" id="name" name="userName" placeholder=" ex) 홍길동">
+          </span>
+        </div>
+
+        <div class="birth_area">
+          <span class="input_box">
+            <label for="birth" id="label_birth_area">생년월일 </label>
+            <input type="text" id="birth" name="userBirth" placeholder=" ex) YYMMDD">
+          </span>
+        </div>
+
+        <div class="phone_area">
+          <span class="input_box">
+            <label for="phone" id="label_phone_area">휴대전화 </label>
+            <input type="text" id="phone" name="userPhone" placeholder=" ex) 01012345678">
+          </span>
+        </div>
+
+        <input type="submit" title="가입" value="가입" class="btn_sign" />
+        <input type="button" title="취소" value="취소" class="btn_cancel" onclick="location.href= 'http://localhost:3000/users/home'">
+
+      </fieldset>
+
     </div>
-  </body>
+  </div>
+    </form>
+
+<!--
+    <fieldset>
+      <legend>회원 가입</legend>
+      <form action="/users/sign_up" method="post">
+        <table>
+          <tr>
+            <td>아이디: </td>
+            <td><input type="text" name="userID" placeholder="Username"></td>
+          </tr>
+
+          <tr>
+            <td>비밀번호: </td>
+            <td><input type="password" name="password" placeholder="Password"></td>
+          </tr>
+
+          <tr>
+            <td>이름: </td>
+            <td><input type="text" name="userName" placeholder="ex) 홍길동"></td>
+          </tr>
+
+          <tr>
+            <td>생년월일: </td>
+            <td>
+              <input type="text" name="userBirth" placeholder="yymmdd(6자)">
+            </td>
+          </tr>
+
+          <tr>
+            <td>휴대전화</td>
+            <td><input type="text" name="userPhone" placeholder="01012345678"></td>
+          </tr>
+        </table>
+
+        <input type="submit" value="가입" />  <input type="button" value="취소" onclick="location.href= 'http://localhost:3000/users/home'">
+      </form>
+    </fieldset>
+-->
+</body>
 </html>

@@ -6,26 +6,40 @@
   <link rel='stylesheet' href='/stylesheets/login.css' />
 </head>
 <body>
-  <div class="login_form">
-    <div class = "loginer">
-    <h1>로그인</h1>
-    <form action="/users/login" method="post">
-<table>
-        <tr>
-          <td>아이디: </td>
-          <td><input type="text" name="userID" placeholder="Username"></td>
-        </tr>
-        <tr>
-          <td>비밀번호: </td>
-          <td><input type="password" name="password" placeholder="Password"></td>
-        </tr>
-        <tr>
-          <td><input type="submit" value="로그인"></td>
-          <td><input type="button" value="회원가입" onclick="location.href='http://localhost:3000/users/sign_up'"></td>
-        </tr>
-</table>
+  <form action="/users/login" method="post">
+    <!-- 상단 로고 -->
+    <header id="main_header">
+      <h1 class="h_logo">
+        <a href = "http://localhost:3000/users/home"><img src="/images/home.png" width="150" /><a>
+        </h1>
+      </header>
+
+      <!-- 로그인 폼 -->
+      <div id="container">
+        <h2>회원 로그인</h2>
+        <div class="content">
+          <fieldset class="login_form">
+            <legend>로그인</legend>
+
+            <div class="id_area">
+              <span class="input_box">
+                <label for="id" id="label_id_area">아이디</label>
+                <input type="text" id="id" name="userID" placeholder="  아이디">
+              </span>
+            </div>
+
+            <div class="pw_area">
+              <span class="input_box">
+                <label for="pw" id="label_pw_area">비밀번호</label>
+                <input type="password" id="pw" name="password" placeholder="  비밀번호">
+              </span>
+            </div>
+            <input type="submit" title="로그인" value="로그인" class="btn_log">
+            <input type="button" title="회원가입" value="회원가입" class="btn_sign" onclick="location.href= 'http://localhost:3000/users/sign_up'">
+          </fieldset>
+        </div>
+      </div>
+
     </form>
-    </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>
